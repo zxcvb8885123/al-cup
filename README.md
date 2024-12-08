@@ -67,7 +67,7 @@
 ### 測試程式
 | class | Description | Output File |
 |:-----:| :---------: | :---------: |
-| AIcup2024Fall_lightgbm_predict_test.py | 預測大致誤差 | 生成一個新的csv |
+| AIcup2024Fall_lightgbm_predict_test.py | 預測大致誤差 | AIcup2024PredictTest.xlsx |
 
 ### 資料處理程式:data
 | class | Description | Output File |
