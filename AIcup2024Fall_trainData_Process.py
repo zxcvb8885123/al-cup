@@ -18,7 +18,7 @@ print(f'原來: {data.shape}')
 filterData = data[(data['Pressure(hpa)'] <= 1200) & (data['Humidity(%)'] <= 100) & (data['Sunlight(Lux)'] < 117758.2)]
 
 #轉換日期時間格式
-filterData['DateTime'] = pd.to_datetime(filterData['DateTime'], format="%Y-%m-%d %H:%M:%S.%f", errors='coerce')
+filterData['DateTime'] = pd.to_datetime(filterData['DateTime'], format='%Y-%m-%d %H:%M:%S.%f', errors='coerce')
 
 #提取時間特徵
 filterData['year'] = filterData['DateTime'].dt.year
@@ -36,7 +36,7 @@ filterData['minute_cos'] = np.cos(2 * np.pi * filterData['minute'] / 60)
 filterData['month_sin'] = np.sin(2 * np.pi * filterData['month'] / 12)
 filterData['month_cos'] = np.cos(2 * np.pi * filterData['month'] / 12)
 
-#季度（0春季，1夏季，2秋季，3冬季）
+#季節（0春季，1夏季，2秋季，3冬季）
 filterData['quarter'] = filterData['month'] % 12 // 3
 
 #每年中的第幾天

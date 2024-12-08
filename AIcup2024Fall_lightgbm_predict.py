@@ -35,4 +35,4 @@ df_pred['答案'] = y_pred2
 #保存結果回原來的 CSV 文件
 df_pred.to_csv(r'D:\program\python\ML\upload(no answer).csv', index=False, header=True)
 
-print("預測結果已成功儲存回upload.csv")
+print('預測結果已成功儲存回upload.csv')

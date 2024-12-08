@@ -41,10 +41,7 @@ lgb_reg1 = lgb.train(
     train_set=train_data,             
     valid_sets=[test_data],           
     num_boost_round=1500,             
-    callbacks=[
-        lgb.early_stopping(stopping_rounds=50),  
-        lgb.log_evaluation(period=50)           
-    ]
+    callbacks=[lgb.log_evaluation(period=50)]
 )
 
 #使用第一個模型對測試集進行預測
@@ -66,10 +63,7 @@ lgb_reg2 = lgb.train(
     train_set=train_data_meta,             
     valid_sets=[test_data_meta],           
     num_boost_round=700,             
-    callbacks=[
-        lgb.early_stopping(stopping_rounds=50),  
-        lgb.log_evaluation(period=50)           
-    ]
+    callbacks=[lgb.log_evaluation(period=50)]
 )
 
 #預測
