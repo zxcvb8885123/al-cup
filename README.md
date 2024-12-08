@@ -15,13 +15,15 @@
 <h3>
 
 ## 資料
-- `AIcup2024FalluploadData.csv`: 處理完upload的資料
-- `AIcup2024FalltrainData.csv`: 處理完訓練的資料
+- `AIcup2024FalluploadData.csv`: upload的資料
+- `AIcup2024FalltrainData.csv`: 訓練的資料
+- `AIcup2024FalltestData.csv`: 測試的資料
 - `upload(no answer).csv`: 最後預測的結果
 
 處理腳本
 - `AIcup2024Fall_trainData_Process.py`:L1~L17資料合併，並增加時間週期性特徵
 - `AIcup2024Fall_uploadData_Process.py`: 處理upload的資料，並增加時間週期性特徵
+- `AIcup2024Fall_testData_process.py`:處理test的資料，並增加時間週期性特徵
 
 ## 訓練
 - `AIcup2024Fall_lightgbm_train.py`:
@@ -62,14 +64,17 @@
 
 ## 重要模塊介紹
 
-### 評分模組
-
+### 測試模組
+| class | Description | Output File |
+|:-----:| :---------: | :---------: |
+| AIcup2024Fall_lightgbm_predict_test.py | 預測誤差 | 生成一個新的csv |
 
 ### 資料模組:data
 | class | Description | Output File |
-|:-----:| :---------: | :---------:|
+|:-----:| :---------: | :---------: |
 | AIcup2024Fall_trainData_Process.py | 前處理訓練資料 | AIcup2024FalltrainData.csv |
 | AIcup2024Fall_uploadData_Process.py | 前處理upload的資料 | AIcup2024FalluploadData.csv |
+| AIcup2024Fall_testData_process.py | 前處理test的資料 | AIcup2024FalltestData.csv |
 
 ### 模型模組:model
 | class | Description | Output File |
