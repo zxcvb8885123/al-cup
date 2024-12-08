@@ -58,13 +58,22 @@
       - `第一層模型預測，並對結果進行非負限制`
       - `第一層模型的預測作為第二層模型的額外特徵，進行最終預測`
 
-最後保存檔案
+最後保存預測檔案
 
 ## 重要模塊介紹
 
-
 ### 評分模組
 
-### 資料模組
 
-### 模型模組
+### 資料模組:data
+| class | Description|
+|:-----:| :--------: |
+|AIcup2024FalluploadData| 用來upload
+|upload(no answer)|
+|AIcup2024FalltrainData|
+
+### 模型模組:model
+| class | Description|
+|:-----:| :--------: |
+|AIcup2024Fall_lightgbm_1.pkl| 用原來的資料先訓練|
+|AIcup2024Fall_lightgbm_2.pkl| 拿第一個model的在做訓練|
