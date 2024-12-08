@@ -66,14 +66,13 @@
 
 
 ### 資料模組:data
-| class | Description|
-|:-----:| :--------: |
-|AIcup2024FalluploadData| 用來upload
-|upload(no answer)|
-|AIcup2024FalltrainData|
+| class | Description | Output File |
+|:-----:| :---------: | :---------:|
+| AIcup2024Fall_trainData_Process.py | 前處理訓練資料 | AIcup2024FalltrainData.csv |
+| AIcup2024Fall_uploadData_Process.py | 前處理upload的資料 | AIcup2024FalluploadData.csv |
 
 ### 模型模組:model
-| class | Description|
-|:-----:| :--------: |
-|AIcup2024Fall_lightgbm_1.pkl| 用原來的資料先訓練|
-|AIcup2024Fall_lightgbm_2.pkl| 拿第一個model的在做訓練|
+| class | Description | Output File |
+|:-----:| :---------: | :---------: |
+| AIcup2024Fall_lightgbm_predict.py | 預測power |  upload(no answer).csv|
+| AIcup2024Fall_lightgbm_train.py | 訓練modle | AIcup2024Fall_lightgbm_1.pkl,AIcup2024Fall_lightgbm_2.pkl |
