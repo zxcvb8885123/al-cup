@@ -62,21 +62,21 @@
 
 最後保存預測檔案
 
-## 重要模塊介紹
+## 程式區塊介紹
 
-### 測試模組
+### 測試程式
 | class | Description | Output File |
 |:-----:| :---------: | :---------: |
 | AIcup2024Fall_lightgbm_predict_test.py | 預測大致誤差 | 生成一個新的csv |
 
-### 資料模組:data
+### 資料處理程式:data
 | class | Description | Output File |
 |:-----:| :---------: | :---------: |
 | AIcup2024Fall_trainData_Process.py | 前處理訓練資料 | AIcup2024FalltrainData.csv |
 | AIcup2024Fall_uploadData_Process.py | 前處理upload的資料 | AIcup2024FalluploadData.csv |
 | AIcup2024Fall_testData_process.py | 前處理test的資料 | AIcup2024FalltestData.csv |
 
-### 模型模組:model
+### 訓練程式/預測程式:model
 | class | Description | Output File |
 |:-----:| :---------: | :---------: |
 | AIcup2024Fall_lightgbm_predict.py | 預測power |  upload(no answer).csv|
